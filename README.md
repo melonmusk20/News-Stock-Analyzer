@@ -13,7 +13,7 @@ An end-to-end AI-powered stock analysis system that combines:
 ---
 
 ## 🚀 Live Demo
-(Deploy on Streamlit Cloud and paste link here)
+https://melonmusk20-news-stock-analyzer-srcapp-uul8tx.streamlit.app/
 
 ---
 
