@@ -45,4 +45,126 @@ Alpha Calculation (Stock - Index)
 Signal Engine
 ↓
 Streamlit Dashboard
-```bash
+```
+
+```code
+---
+
+## 🧠 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| NLP Model | FinBERT (ProsusAI) |
+| Backend Logic | Python |
+| Data Processing | Pandas |
+| Stock Data | yFinance |
+| Frontend | Streamlit |
+| Deployment | Streamlit Cloud |
+| Version Control | Git + GitHub |
+
+---
+
+```
+
+## 📂 Project Structure
+
+```
+
+News-Stock-Analyzer/
+│
+├── data/
+│ ├── news.csv
+│ ├── news_scored.csv
+│ ├── prices_stock.csv
+│ ├── prices_index.csv
+│ ├── news_impact.csv
+│
+├── outputs/
+│ ├── avg_alpha_bar.png
+│ ├── sentiment_vs_alpha.png
+│
+├── src/
+│ ├── analysis.py
+│ ├── app.py
+│ ├── impact_join.py
+│ ├── main.py
+│ ├── prices.py
+│ ├── rss_fetch.py
+│ ├── sentiment.py
+│ ├── signal.py
+│
+└── README.md
+
+```
+
+---
+
+## ⚙️ How It Works
+
+### 1️⃣ News Collection
+Pulls stock-related news using Google RSS feeds.
+
+### 2️⃣ Sentiment Analysis
+Uses FinBERT to classify news as:
+- Positive
+- Neutral
+- Negative
+
+Generates:
+- `sent_score`
+- `sent_label`
+- `confidence`
+
+---
+
+### 3️⃣ Price Data Integration
+Downloads:
+- Stock price
+- Market index (^GSPC / ^NSEI)
+
+Calculates:
+- 1-day return
+- Alpha (Stock return - Index return)
+
+---
+
+### 4️⃣ Signal Generation
+
+```python
+if sentiment > 0.4 and mentions >= 2:
+    BUY
+elif sentiment < -0.4:
+    AVOID
+else:
+    HOLD
+```
+
+---
+
+# 📊 Dashboard Features
+
+   • Stock selector
+
+   • Sentiment overview
+
+   • Alpha correlation
+
+   • Signal output (BUY / HOLD / AVOID)
+
+   • Clean professional UI
+
+ ---
+
+ # 🔧 Local Setup
+
+ ```bash
+git clone https://github.com/melonmusk20/News-Stock-Analyzer.git
+cd News-Stock-Analyzer
+
+pip install -r requirements.txt
+
+streamlit run streamlit_app.py
+
+```
+
+
