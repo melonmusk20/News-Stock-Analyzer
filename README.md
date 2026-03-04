@@ -5,7 +5,7 @@ An end-to-end AI-powered stock analysis system that combines:
 • Financial News (Google RSS)  
 • FinBERT Sentiment Analysis  
 • Stock Price Data (Yahoo Finance)  
-• Market Index Benchmarking  
+• Market Index Benchmarking 
 • Alpha Calculation  
 • Trading Signal Generation  
 • Interactive Streamlit Dashboard  
